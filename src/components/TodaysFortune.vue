@@ -1,21 +1,17 @@
 <template>
   <div>
+    <h2>행운의 준용쿠키</h2>
     <form @submit="todaysFortune" id="contact-form">
-      이름을 입력해주세요 :
+      <label for="name">name: </label>
       <input type="text" v-model="name" name="name" />
       <input type="hidden" name="contentName" value="오늘의 포춘쿠키" />
       <input type="hidden" name="writer" value="선준용" />
       <br />
-      <label>email</label>
+      <label for="email">email: </label>
       <input type="email" name="email" />
-      <input type="hidden" name="message" />
+      <input type="hidden" name="message" /> <br />
       <input type="submit" />
     </form>
-    <ul>
-      <li v-for="(message, index) in messages" :key="index">
-        {{ message }}
-      </li>
-    </ul>
   </div>
 </template>
 
@@ -47,6 +43,10 @@ export default {
             console.log("FAILED...", error);
           }
         );
+      this.$router.push({
+        name: "ContentResult",
+        params: { message: randomMessage },
+      });
     },
   },
   data() {

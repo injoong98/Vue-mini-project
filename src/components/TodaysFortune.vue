@@ -15,14 +15,14 @@
       <br />
       <form @submit="todaysFortune" class="col-3" id="contact-form">
         <label for="name">name: </label>
-        <input class="mb-1" type="text" v-model="name" name="name" />
+        <input class="form-control" type="text" v-model="name" name="name" />
         <input type="hidden" name="contentName" value="오늘의 포춘쿠키" />
         <input type="hidden" name="writer" value="선준용" />
         <br />
         <label for="email">email: </label>
         <input class="mb-3 form-control" type="email" name="email" />
         <input type="hidden" name="message" /> <br />
-        <input class="btn btn-secondary" type="submit" />
+        <input class="btn btn-secondary btn-lg" type="submit" />
       </form>
     </div>
   </div>
@@ -93,7 +93,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 h2,
 label {
   color: white;

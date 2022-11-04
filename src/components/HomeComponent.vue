@@ -32,10 +32,6 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 @import url("../../public/css/styles.css");
-.btn-primary {
-  background-color: "#1a253c";
-  border-color: "#1a253c";
-}
 </style>

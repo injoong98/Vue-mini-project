@@ -1,15 +1,20 @@
 <template>
   <div>
     <h2>이해건의 은밀한 상담소</h2>
-    <form id="contact-form">
-      <label for="name">name</label>
-      <input type="name" name="name" />
-      <br />
-      <label for="user_email">email</label>
-      <input type="email" name="user_email" />
-      <br />
-      <label for="message">message</label>
-      <input type="text" name="message" />
+    <div></div>
+    <form id="contact-form" class="col-6">
+      <div class="mb-3">
+        <label for="name" class="form-label">name</label>
+        <input type="text" class="form-control" id="name" />
+      </div>
+      <div class="mb-3">
+        <label for="user_email" class="form-label">email</label>
+        <input type="email" class="form-control" id="user_email" />
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">message</label>
+        <input type="text" class="form-control" id="message" />
+      </div>
       <br />
       <input type="submit" value="Send" />
     </form>

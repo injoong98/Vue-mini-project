@@ -1,6 +1,7 @@
 <template>
   <div>
     <h2>결과 입니다.</h2>
+
     <p>{{ $route.params.message }}</p>
 
     <a id="kakaotalk-sharing-btn" @click="kakaoLink" href="javascript:;">

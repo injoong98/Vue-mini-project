@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import ContentView from "../views/ContentView.vue";
 import SecretClinic from "../components/SecretClinic.vue";
+import TodaysFortune from "../components/TodaysFortune.vue";
 
 Vue.use(VueRouter);
 
@@ -22,11 +23,11 @@ const routes = [
         name: "SecretClinic",
         component: SecretClinic,
       },
-      // {
-      //   path: "create",
-      //   name: "movieCreate",
-      //   component: MovieCreate,
-      // },
+      {
+        path: "TodaysFortune",
+        name: "TodaysFortune",
+        component: TodaysFortune,
+      },
     ],
   },
 ];

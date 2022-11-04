@@ -33,7 +33,7 @@
             <input type="hidden" name="message" /> <br />
             <div>제 조언이 도움이 되었으면 합니다.</div>
             <br />
-            <button type="button" class="btn btn-secondary">전송</button>
+            <button type="submit" class="btn btn-secondary">전송</button>
           </form>
         </div>
       </div>

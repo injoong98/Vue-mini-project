@@ -17,7 +17,6 @@
   integrity="sha384-PFHeU/4gvSH8kpvhrigAPfZGBDPs372JceJq3jAXce11bVA6rMvGWzvP4fMQuBGL"
   crossorigin="anonymous"
 ></script>
-
 <script>
 Kakao.init("0fee8964906c77924fb2e96b53b79f1b"); // 사용하려는 앱의 JavaScript 키 입력
 </script>

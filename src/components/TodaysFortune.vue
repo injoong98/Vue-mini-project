@@ -19,30 +19,31 @@
   type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
 ></script>
+<script type="text/javascript">
+(function () {
+  emailjs.init("swV322sV-is7R1E48");
+})();
+</script>
 
 <script>
 export default {
   name: "TodaysFortune",
   methods: {
     todaysFortune(event) {
-      // generate a five digit number for the contact_number variable
-      // this.contact_number.value = (Math.random() * 100000) | 0;
-
-      // these IDs from the previous steps
       const randomMessage =
         this.messages[Math.floor(Math.random() * this.messages.length)];
       event.target.message.value = randomMessage;
 
-      emailjs
-        .sendForm("service_o9tqcal", "template_5anbvxn", event.target)
-        .then(
-          function () {
-            console.log("SUCCESS!");
-          },
-          function (error) {
-            console.log("FAILED...", error);
-          }
-        );
+      // emailjs
+      //   .sendForm("service_o9tqcal", "template_5anbvxn", event.target)
+      //   .then(
+      //     function () {
+      //       console.log("SUCCESS!");
+      //     },
+      //     function (error) {
+      //       console.log("FAILED...", error);
+      //     }
+      //   );
       this.$router.push({
         name: "ContentResult",
         params: { message: randomMessage },
@@ -54,7 +55,7 @@ export default {
       name: "",
       email: "",
       messages: [
-        "슬픔에 대한 치법은 운동입니다.",
+        "슬픔에 대한 치료법은 운동입니다.",
         "생각하지 말고, 행동하세요!.",
         "누군가를 사랑한다면 늦기 전에 많이 말해주세요.",
         "꼰대가 되기 싫다면 상대를 이해하고 존중하세요. 나이의 많고 적음은 중요하지 않습니다.",

@@ -7,6 +7,8 @@
         <label for="name" class="form-label">name</label>
         <input type="text" class="form-control" id="name" />
       </div>
+      <input type="hidden" name="contentName" value="은밀한 상담소" />
+      <input type="hidden" name="writer" value="이해건" />
       <div class="mb-3">
         <label for="user_email" class="form-label">email</label>
         <input type="email" class="form-control" id="user_email" />
@@ -16,49 +18,39 @@
         <input type="text" class="form-control" id="message" />
       </div>
       <br />
-      <input type="submit" value="Send" />
+      <input type="submit" />
     </form>
   </div>
 </template>
-
-<script>
-export default {
-  name: "SecretClinic",
-  data() {
-    return {};
-  },
-};
-</script>
 
 <script
   type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
 ></script>
 
-<script type="text/javascript">
-(function () {
-  // https://dashboard.emailjs.com/admin/account
-  emailjs.init("swV322sV-is7R1E48");
-})();
-</script>
-<script type="text/javascript">
-window.onload = function () {
-  document
-    .getElementById("contact-form")
-    .addEventListener("submit", function (event) {
-      event.preventDefault();
-      // generate a five digit number for the contact_number variable
-      this.contact_number.value = (Math.random() * 100000) | 0;
-      // these IDs from the previous steps
-      emailjs.sendForm("service_o9tqcal", "template_5anbvxn", this).then(
-        function () {
-          console.log("SUCCESS!");
-        },
-        function (error) {
-          console.log("FAILED...", error);
-        }
-      );
-    });
+<script>
+export default {
+  name: "SecretClinic",
+  methods: {
+    todaysFortune(event) {
+      emailjs
+        .sendForm("service_o9tqcal", "template_5anbvxn", event.target)
+        .then(
+          function () {
+            console.log("SUCCESS!");
+          },
+          function (error) {
+            console.log("FAILED...", error);
+          }
+        );
+    },
+  },
+  data() {
+    return {
+      name: "",
+      email: "",
+    };
+  },
 };
 </script>
 

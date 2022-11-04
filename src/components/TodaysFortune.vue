@@ -43,6 +43,10 @@ export default {
             console.log("FAILED...", error);
           }
         );
+      this.$router.push({
+        name: "ContentResult",
+        params: { message: randomMessage },
+      });
     },
   },
   data() {

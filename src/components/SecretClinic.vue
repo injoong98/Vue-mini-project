@@ -1,6 +1,6 @@
 <template>
   <div class="vh-100">
-    <div id="main" class="vh-100 d-flex">
+    <div class="vh-100 d-flex">
       <div
         id="bi"
         class="col-4"
@@ -11,7 +11,7 @@
       <div id="bim" class="col-4">
         <h2 class="py-5">이해건의 은밀한 상담소</h2>
         <div class="d-flex justify-content-center">
-          <form @submit="send_SecretClinic" id="contact-form" class="">
+          <form @submit="send_SecretClinic" id="contact-form" class="col-10">
             <div class="mb-3">
               <label for="name" class="form-label"
                 >이름이 어떻게 되시나요?</label

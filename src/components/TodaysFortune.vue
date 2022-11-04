@@ -19,6 +19,11 @@
   type="text/javascript"
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
 ></script>
+<script type="text/javascript">
+(function () {
+  emailjs.init("swV322sV-is7R1E48");
+})();
+</script>
 
 <script>
 export default {
@@ -29,16 +34,16 @@ export default {
         this.messages[Math.floor(Math.random() * this.messages.length)];
       event.target.message.value = randomMessage;
 
-      emailjs
-        .sendForm("service_o9tqcal", "template_5anbvxn", event.target)
-        .then(
-          function () {
-            console.log("SUCCESS!");
-          },
-          function (error) {
-            console.log("FAILED...", error);
-          }
-        );
+      // emailjs
+      //   .sendForm("service_o9tqcal", "template_5anbvxn", event.target)
+      //   .then(
+      //     function () {
+      //       console.log("SUCCESS!");
+      //     },
+      //     function (error) {
+      //       console.log("FAILED...", error);
+      //     }
+      //   );
       this.$router.push({
         name: "ContentResult",
         params: { message: randomMessage },

@@ -1,20 +1,30 @@
 <template>
-  <div>
+  <div class="mt-2">
     <h2>행운의 준용쿠키</h2>
-    <img src="../assets/fc.jpg" />
-    <br />
-    <br />
-    <form @submit="todaysFortune" id="contact-form">
-      <label for="name">name: </label>
-      <input type="text" v-model="name" name="name" />
-      <input type="hidden" name="contentName" value="오늘의 포춘쿠키" />
-      <input type="hidden" name="writer" value="선준용" />
+    <div class="mt-2 d-flex justify-content-center">
+      <img
+        src="../assets/fc.jpg"
+        style="
+          position: absolute;
+          z-index: -100;
+          top: 0px;
+          left: 0px;
+          width: 100vw;
+        "
+      />
       <br />
-      <label for="email">email: </label>
-      <input type="email" name="email" />
-      <input type="hidden" name="message" /> <br />
-      <input type="submit" />
-    </form>
+      <form @submit="todaysFortune" class="col-3" id="contact-form">
+        <label for="name">name: </label>
+        <input class="mb-1" type="text" v-model="name" name="name" />
+        <input type="hidden" name="contentName" value="오늘의 포춘쿠키" />
+        <input type="hidden" name="writer" value="선준용" />
+        <br />
+        <label for="email">email: </label>
+        <input class="mb-3 form-control" type="email" name="email" />
+        <input type="hidden" name="message" /> <br />
+        <input class="btn btn-secondary" type="submit" />
+      </form>
+    </div>
   </div>
 </template>
 
@@ -76,4 +86,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+h2,
+label {
+  color: white;
+}
+</style>

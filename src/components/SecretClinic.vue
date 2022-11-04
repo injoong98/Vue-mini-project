@@ -1,14 +1,18 @@
 <template>
   <div>
-    <body>
-      <form id="contact-form">
-        <input type="name" name="name" />
-        <label>email</label>
-        <input type="email" name="user_email" />
-        <input type="hidden" name="message" />
-        <input type="submit" value="Send" />
-      </form>
-    </body>
+    <h2>이해건의 은밀한 상담소</h2>
+    <form id="contact-form">
+      <label for="name">name</label>
+      <input type="name" name="name" />
+      <br />
+      <label for="user_email">email</label>
+      <input type="email" name="user_email" />
+      <br />
+      <label for="message">message</label>
+      <input type="text" name="message" />
+      <br />
+      <input type="submit" value="Send" />
+    </form>
   </div>
 </template>
 

@@ -1,16 +1,11 @@
 <template>
-  <div>
-    <!-- <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-      <ul class="sidebar-nav">
-        <li class="sidebar-brand"><a href="#page-top">Start Bootstrap</a></li>
-        <li class="sidebar-nav-item"><a href="#page-top">Home</a></li>
-        <li class="sidebar-nav-item"><a href="#about">About</a></li>
-        <li class="sidebar-nav-item"><a href="#services">Services</a></li>
-        <li class="sidebar-nav-item"><a href="#portfolio">Portfolio</a></li>
-        <li class="sidebar-nav-item"><a href="#contact">Contact</a></li>
-      </ul>
-    </nav> -->
+  <div style="background-color: black">
+    <router-link :to="{ name: 'home' }">Home</router-link> |
+    <router-link :to="{ name: 'SecretClinic' }"
+      >이해건의 은밀한 교습실</router-link
+    >
+    |
+    <router-link :to="{ name: 'TodaysFortune' }">행운의 준용쿠키</router-link>
   </div>
 </template>
 

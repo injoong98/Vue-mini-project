@@ -34,16 +34,16 @@ export default {
         this.messages[Math.floor(Math.random() * this.messages.length)];
       event.target.message.value = randomMessage;
 
-      // emailjs
-      //   .sendForm("service_o9tqcal", "template_5anbvxn", event.target)
-      //   .then(
-      //     function () {
-      //       console.log("SUCCESS!");
-      //     },
-      //     function (error) {
-      //       console.log("FAILED...", error);
-      //     }
-      //   );
+      emailjs
+        .sendForm("service_o9tqcal", "template_5anbvxn", event.target)
+        .then(
+          function () {
+            console.log("SUCCESS!");
+          },
+          function (error) {
+            console.log("FAILED...", error);
+          }
+        );
       this.$router.push({
         name: "ContentResult",
         params: { message: randomMessage },

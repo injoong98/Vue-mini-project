@@ -1,44 +1,59 @@
 <template>
   <div class="vh-100">
-    <div
-      id="main"
-      :style="{
-        backgroundImage: 'url(' + require('@/assets/SC_bg.png') + ')',
-      }"
-      class="vh-100"
-    >
-      <h2 class="py-5">이해건의 은밀한 상담소</h2>
-      <div class="d-flex justify-content-center">
-        <form @submit="send_SecretClinic" id="contact-form" class="col-4">
-          <div class="mb-3">
-            <label for="name" class="form-label">이름이 어떻게 되시나요?</label>
-            <input type="text" class="form-control" name="name" />
-          </div>
-          <input type="hidden" name="contentName" value="은밀한 상담소" />
-          <input type="hidden" name="writer" value="이해건" />
-          <div class="mb-3">
-            <label for="email" class="form-label">email을 입력해주세요</label>
-            <input type="email" class="form-control" name="email" />
-          </div>
-          <div class="mb-3">
-            <label for="consultation" class="form-label"
-              >고민을 말해주세요</label
-            >
-            <textarea class="form-control" name="consultation"></textarea>
-          </div>
-          <input type="hidden" name="message" /> <br />
-          <div>제 조언이 도움이 되었으면 합니다.</div>
-          <br />
-          <button type="button" class="btn btn-secondary">전송</button>
-        </form>
+    <div id="main" class="vh-100 d-flex">
+      <div
+        id="bi"
+        class="col-4"
+        :style="{
+          backgroundImage: 'url(' + require('@/assets/SC1.png') + ')',
+        }"
+      ></div>
+      <div id="bim" class="col-4">
+        <h2 class="py-5">이해건의 은밀한 상담소</h2>
+        <div class="d-flex justify-content-center">
+          <form @submit="send_SecretClinic" id="contact-form" class="">
+            <div class="mb-3">
+              <label for="name" class="form-label"
+                >이름이 어떻게 되시나요?</label
+              >
+              <input type="text" class="form-control" name="name" />
+            </div>
+            <input type="hidden" name="contentName" value="은밀한 상담소" />
+            <input type="hidden" name="writer" value="이해건" />
+            <div class="mb-3">
+              <label for="email" class="form-label">email을 입력해주세요</label>
+              <input type="email" class="form-control" name="email" />
+            </div>
+            <div class="mb-3">
+              <label for="consultation" class="form-label"
+                >고민을 말해주세요</label
+              >
+              <textarea class="form-control" name="consultation"></textarea>
+            </div>
+            <input type="hidden" name="message" /> <br />
+            <div>제 조언이 도움이 되었으면 합니다.</div>
+            <br />
+            <button type="button" class="btn btn-secondary">전송</button>
+          </form>
+        </div>
       </div>
+      <div
+        id="bi"
+        class="col-4"
+        :style="{
+          backgroundImage: 'url(' + require('@/assets/SC2.png') + ')',
+        }"
+      ></div>
     </div>
   </div>
 </template>
 
 <style>
-#main {
+#bi {
   background-size: cover;
+}
+#bim {
+  background-color: blanchedalmond;
 }
 </style>
 

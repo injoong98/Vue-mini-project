@@ -16,8 +16,6 @@ export default {
 </script>
 
 <style>
-@import url("../../public/css/styles.css");
-
 #sidebar-wrapper {
   padding-left: 0px;
 }

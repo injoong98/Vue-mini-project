@@ -4,6 +4,7 @@ import HomeView from "../views/HomeView.vue";
 import ContentView from "../views/ContentView.vue";
 import SecretClinic from "../components/SecretClinic.vue";
 import TodaysFortune from "../components/TodaysFortune.vue";
+import ContentResult from "../components/ContentResult.vue";
 
 Vue.use(VueRouter);
 
@@ -27,6 +28,11 @@ const routes = [
         path: "TodaysFortune",
         name: "TodaysFortune",
         component: TodaysFortune,
+      },
+      {
+        path: "ContentResult",
+        name: "ContentResult",
+        component: ContentResult,
       },
     ],
   },

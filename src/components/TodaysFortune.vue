@@ -1,6 +1,9 @@
 <template>
   <div>
     <h2>행운의 준용쿠키</h2>
+    <img src="../assets/fc.jpg" />
+    <br />
+    <br />
     <form @submit="todaysFortune" id="contact-form">
       <label for="name">name: </label>
       <input type="text" v-model="name" name="name" />

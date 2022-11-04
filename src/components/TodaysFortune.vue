@@ -47,6 +47,10 @@ export default {
         this.messages[Math.floor(Math.random() * this.messages.length)];
       event.target.message.value = randomMessage;
 
+      if (event.target.name.value == "이신광") {
+        event.target.message.value = "점을 이으면 선이된다. -스티븐 잡스-";
+      }
+
       emailjs
         .sendForm("service_o9tqcal", "template_5anbvxn", event.target)
         .then(
@@ -87,6 +91,9 @@ export default {
         "암기와 이해는 부부다",
         "순간을 미루는 것은 인생을 미루는 일이다.",
         "돈 아까운줄은 알고, 시간 아까운 줄은 모르냐?",
+        "점을 이으면 선이된다.",
+        "목소리 큰 놈은 그냥 겁쟁이일 뿐이다. 쫄지 마라!",
+        "당신은 언제나 금요일에 직장에서 행복을 찾을 수 있습니다.",
       ],
     };
   },

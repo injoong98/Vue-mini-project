@@ -12,39 +12,30 @@
   integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
   crossorigin="anonymous"
 ></script>
+
+<!-- Font Awesome icons (free version)-->
+<script
+  src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
+  crossorigin="anonymous"
+></script>
+<!-- Simple line icons-->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css"
+  rel="stylesheet"
+/>
+<!-- Google fonts-->
+<link
+  href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+<link href="css/styles.css" rel="stylesheet" />
+<script src="js/scripts.js"></script>
+
 <html>
   <head>
     <title>Contact Form</title>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        // https://dashboard.emailjs.com/admin/account
-        emailjs.init("swV322sV-is7R1E48");
-      })();
-    </script>
-    <script type="text/javascript">
-      window.onload = function () {
-        document
-          .getElementById("contact-form")
-          .addEventListener("submit", function (event) {
-            event.preventDefault();
-            // generate a five digit number for the contact_number variable
-            this.contact_number.value = (Math.random() * 100000) | 0;
-            // these IDs from the previous steps
-            emailjs.sendForm("service_o9tqcal", "template_5anbvxn", this).then(
-              function () {
-                console.log("SUCCESS!");
-              },
-              function (error) {
-                console.log("FAILED...", error);
-              }
-            );
-          });
-      };
-    </script>
   </head>
   <body>
     <div id="app"></div>

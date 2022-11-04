@@ -1,15 +1,17 @@
 <template>
-  <div
-    :style="{
-      backgroundImage: 'url(' + require('@/assets/SC_bg.png') + ')',
-    }"
-  >
-    <div class="vh-100">
+  <div class="vh-100">
+    <div
+      id="main"
+      :style="{
+        backgroundImage: 'url(' + require('@/assets/SC_bg.png') + ')',
+      }"
+      class="vh-100"
+    >
       <h2 class="py-5">이해건의 은밀한 상담소</h2>
       <div class="d-flex justify-content-center">
         <form @submit="send_SecretClinic" id="contact-form" class="col-4">
           <div class="mb-3">
-            <label for="name" class="form-label">name</label>
+            <label for="name" class="form-label">방황하는 어린 양</label>
             <input type="text" class="form-control" name="name" />
           </div>
           <input type="hidden" name="contentName" value="은밀한 상담소" />
@@ -24,12 +26,18 @@
           </div>
           <input type="hidden" name="message" /> <br />
           <br />
-          <input type="submit" />
+          <button type="button" class="btn btn-secondary">전송</button>
         </form>
       </div>
     </div>
   </div>
 </template>
+
+<style>
+#main {
+  background-size: cover;
+}
+</style>
 
 <script
   type="text/javascript"
